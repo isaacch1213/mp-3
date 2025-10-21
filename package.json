@@ -1,6 +1,7 @@
 {
   "name": "mp-3",
   "private": true,
+  "homepage": "https://mp-3-sandy-three.vercel.app",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
