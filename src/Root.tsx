@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router";
+import { Routes, Route, useLocation, useNavigate } from "react-router";
 import styled from "styled-components";
 import Header from "./Header";
 import Nav from "./Nav";
@@ -78,12 +78,19 @@ const pageTitle: Record<string, string> = {
 export default function Root() {
   // Use React Router useLocation hook to get the curent path
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Use the location objects property pathname to get the current path
     const title = pageTitle[location.pathname];
+
+    // Check if the path exists and if not goes back to home (root path)
+    if (!title) {
+      navigate("/");
+    }
+
+    // Use the location objects property pathname to get the current path
     document.title = `${title} | Resume`;
-  }, [location.pathname]);
+  }, [location.pathname, navigate]);
 
   return (
     <PageWrapper>
@@ -101,6 +108,7 @@ export default function Root() {
               <Route path="/skills" element={<Skills />} />
               <Route path="/achievements" element={<Achievements />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="*" element={<Home />} />
             </Routes>
           </VerticalWrapper>
         </StyledMain>
