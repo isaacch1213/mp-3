@@ -7,11 +7,6 @@ const StyledNav = styled.nav`
   width: 30%;
   padding: 2%;
 
-  a {
-    text-decoration: none;
-    color: #f5e9dc;
-  }
-
   ul {
     display: flex;
     flex-direction: column;
@@ -20,6 +15,7 @@ const StyledNav = styled.nav`
     height: 100%;
     gap: 5%;
     padding: 0;
+    list-style-type: none;
   }
 
   li {
@@ -49,27 +45,36 @@ const StyledNav = styled.nav`
   }
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #f5e9dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2%;
+`;
+
 export default function Nav() {
   return (
     <StyledNav>
       <ul>
         <li>
-          <Link to={"/"}>Home</Link>
+          <StyledLink to={"/"}>Home</StyledLink>
         </li>
         <li>
-          <Link to={"/education"}>Education</Link>
+          <StyledLink to={"/education"}>Education</StyledLink>
         </li>
         <li>
-          <Link to={"/experience"}>Experience</Link>
+          <StyledLink to={"/experience"}>Experience</StyledLink>
         </li>
         <li>
-          <Link to={"/skills"}>Skills</Link>
+          <StyledLink to={"/skills"}>Skills</StyledLink>
         </li>
         <li>
-          <Link to={"/achievements"}>Achievements</Link>
+          <StyledLink to={"/achievements"}>Achievements</StyledLink>
         </li>
         <li>
-          <Link to={"/projects"}>Projects</Link>
+          <StyledLink to={"/projects"}>Projects</StyledLink>
         </li>
       </ul>
     </StyledNav>
