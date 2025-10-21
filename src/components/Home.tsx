@@ -51,7 +51,7 @@ export default function Home() {
       <PContainer>
         <p>Hello!</p>
         <p>
-          My name is Isaac and I'm a sophomore at Boston University majoring in
+          My name is Isaac and I'm a junior at Boston University majoring in
           Computer Science with a minor in Data Science. I am a aspiring
           full-stack software engineer who hopes to one day work at a company
           where I can make an actual positive change in our world.
