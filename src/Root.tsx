@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router";
 import styled from "styled-components";
 import Header from "./Header";
@@ -77,6 +78,12 @@ const pageTitle: Record<string, string> = {
 export default function Root() {
   // Use React Router useLocation hook to get the curent path
   const location = useLocation();
+
+  useEffect(() => {
+    // Use the location objects property pathname to get the current path
+    const title = pageTitle[location.pathname];
+    document.title = `${title} | Resume`;
+  }, [location.pathname]);
 
   return (
     <PageWrapper>

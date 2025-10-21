@@ -282,7 +282,7 @@ export default function Projects() {
         </p>
         <CalculatorContent>
           <CalculatorInputs>
-            {/* combination of type="text" + inputMode="numberic" + type checking in function allow for stricter input values of only numbers */}
+            {/* combination of type="text" + type checking in function allow for stricter input values of only numbers */}
             <StyledInput
               type="text"
               inputMode="numeric"
