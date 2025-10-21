@@ -1,10 +1,11 @@
-import { Routes, Route } from "react-router";
+import { Routes, Route, useLocation } from "react-router";
 import styled from "styled-components";
 import Header from "./Header";
 import Nav from "./Nav";
 import Home from "./components/Home";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
+import Skills from "./components/Skills";
 import Footer from "./Footer";
 
 const PageWrapper = styled.div`
@@ -61,18 +62,34 @@ const StyledMain = styled.main`
   }
 `;
 
+// Use a record to dynamically handle the title of each page based off the current route
+const pageTitle: Record<string, string> = {
+  "/": "Home",
+  "/education": "Education",
+  "/experience": "Experience",
+  "/skills": "Skills",
+  "/achievements": "Achievements",
+  "/projects": "Projects",
+};
+
 export default function Root() {
+  // Use React Router useLocation hook to get the curent path
+  const location = useLocation();
+
   return (
     <PageWrapper>
       <Header />
       <ContentContainer>
         <Nav />
         <StyledMain>
+          {/* Use the location objects property pathname to get the current path */}
+          <h2>{pageTitle[location.pathname]}</h2>
           <VerticalWrapper>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/education" element={<Education />} />
               <Route path="/experience" element={<Experience />} />
+              <Route path="/skills" element={<Skills />} />
             </Routes>
           </VerticalWrapper>
         </StyledMain>

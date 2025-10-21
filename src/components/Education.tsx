@@ -43,42 +43,38 @@ const RelevantCoursesContainer = styled.div`
 
 export default function Education() {
   return (
-    <>
-      <h2>Education</h2>
-      <EducationContainer>
-        <SchoolWrapper>
-          <SchoolContainer>
-            <SchoolContent>
-              <p>
-                <strong>Boston University</strong>
-              </p>
-              <p>Bachelor of Arts in Computer Science, Minor in Data Science</p>
-              <p>
-                <em>Expected May, 2027</em>
-              </p>
-              <p>GPA: 3.74/4.00</p>
-            </SchoolContent>
-          </SchoolContainer>
-          <SchoolContainer>
-            <SchoolContent>
-              <p>
-                <strong>Newton South High School</strong>
-              </p>
-              <p>
-                <em>May, 2023</em>
-              </p>
-              <p>GPA: 3.97/4.00</p>
-            </SchoolContent>
-          </SchoolContainer>
-          <RelevantCoursesContainer>
+    <EducationContainer>
+      <SchoolWrapper>
+        <SchoolContainer>
+          <SchoolContent>
             <p>
-              <strong>Relevant Coursework:</strong> Data Structure and
-              Algorithms, Linear Algebra, Discrete Math, Computer Systems, Intro
-              to Databases
+              <strong>Boston University</strong>
             </p>
-          </RelevantCoursesContainer>
-        </SchoolWrapper>
-      </EducationContainer>
-    </>
+            <p>Bachelor of Arts in Computer Science, Minor in Data Science</p>
+            <p>
+              <em>Expected May, 2027</em>
+            </p>
+            <p>GPA: 3.74/4.00</p>
+          </SchoolContent>
+        </SchoolContainer>
+        <SchoolContainer>
+          <SchoolContent>
+            <p>
+              <strong>Newton South High School</strong>
+            </p>
+            <p>
+              <em>May, 2023</em>
+            </p>
+            <p>GPA: 3.97/4.00</p>
+          </SchoolContent>
+        </SchoolContainer>
+        <RelevantCoursesContainer>
+          <p>
+            <strong>Relevant Coursework:</strong> Data Structure and Algorithms,
+            Linear Algebra, Discrete Math, Computer Systems, Intro to Databases
+          </p>
+        </RelevantCoursesContainer>
+      </SchoolWrapper>
+    </EducationContainer>
   );
 }

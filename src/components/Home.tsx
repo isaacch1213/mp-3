@@ -46,25 +46,22 @@ const PContainer = styled.div`
 
 export default function Home() {
   return (
-    <>
-      <h2>Home</h2>
-      <HomeContainer>
-        <StyledImg src={headshot} alt="Isaac Chan Headshot" />
-        <PContainer>
-          <p>Hello!</p>
-          <p>
-            My name is Isaac and I'm a sophomore at Boston University majoring
-            in Computer Science with a minor in Data Science. I am a aspiring
-            full-stack software engineer who hopes to one day work at a company
-            where I can make an actual positive change in our world.
-          </p>
-          <p>
-            This is a website where you can learn more about my educational and
-            career background, as well as other relevant information that you
-            may find interesting.
-          </p>
-        </PContainer>
-      </HomeContainer>
-    </>
+    <HomeContainer>
+      <StyledImg src={headshot} alt="Isaac Chan Headshot" />
+      <PContainer>
+        <p>Hello!</p>
+        <p>
+          My name is Isaac and I'm a sophomore at Boston University majoring in
+          Computer Science with a minor in Data Science. I am a aspiring
+          full-stack software engineer who hopes to one day work at a company
+          where I can make an actual positive change in our world.
+        </p>
+        <p>
+          This is a website where you can learn more about my educational and
+          career background, as well as other relevant information that you may
+          find interesting.
+        </p>
+      </PContainer>
+    </HomeContainer>
   );
 }
