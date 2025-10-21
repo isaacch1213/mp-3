@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
+import Achievements from "./components/Achievements";
 import Footer from "./Footer";
 
 const PageWrapper = styled.div`
@@ -90,6 +91,7 @@ export default function Root() {
               <Route path="/education" element={<Education />} />
               <Route path="/experience" element={<Experience />} />
               <Route path="/skills" element={<Skills />} />
+              <Route path="/achievements" element={<Achievements />} />
             </Routes>
           </VerticalWrapper>
         </StyledMain>
