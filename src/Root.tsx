@@ -4,6 +4,7 @@ import Header from "./Header";
 import Nav from "./Nav";
 import Home from "./components/Home";
 import Education from "./components/Education";
+import Experience from "./components/Experience";
 import Footer from "./Footer";
 
 const PageWrapper = styled.div`
@@ -71,6 +72,7 @@ export default function Root() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/education" element={<Education />} />
+              <Route path="/experience" element={<Experience />} />
             </Routes>
           </VerticalWrapper>
         </StyledMain>
