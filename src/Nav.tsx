@@ -51,7 +51,7 @@ const StyledLink = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 2%;
+  padding-top: 1%;
 `;
 
 export default function Nav() {
